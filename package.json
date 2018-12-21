@@ -1,0 +1,29 @@
+{
+  "name": "kpopscraper",
+  "version": "1.0.0",
+  "description": "final project for cs482",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "start": "npx pm2 start server.js --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kpossibles/kpopscraper.git"
+  },
+  "author": "Kim Pham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kpossibles/kpopscraper/issues"
+  },
+  "homepage": "https://github.com/kpossibles/kpopscraper#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "pug": "^2.0.3"
+  }
+}
