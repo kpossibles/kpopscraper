@@ -4,10 +4,18 @@ html
     title #{title}
     link(rel='stylesheet', href='/css/style.css')
     meta(name="viewport" content="width=device-width, initial-scale=1")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.17.0/lazyload.min.js")
+    script(src="https://code.jquery.com/jquery-3.3.1.min.js")
+    
   body
     main
       block header
         header.header
           h1 #{title}
+      block nav
+        nav
+          ul
+            - var list = ["groups", "idols", "random"]
+            each item in list
+              li
+                a(href=`/${item}`)= item
       block content

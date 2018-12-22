@@ -1,21 +1,23 @@
 extends default
 
 block header
-
+block nav
 block content
   div.profile
     div.img-container
-      div.profile-image(style=`background: url('/images/${person.profile_pic}') top center
-      no-repeat; background-size: cover;`)
       div.profile-image2(style=`background: url('/images/${person.profile_pic}') top center
       no-repeat; background-size: cover;`)
     div.profile-details
       h1.profile-name
         | #{person.stage_name} 
-      h2 #{person.real_name}
-      if person.Group != ''
+      h2.profile-realname #{person.real_name}
+      if person.group != ''
         h3.profile-tagline
-          | #{person.Group}
+          - var groups = person.group.split(", ")
+          ul
+            for g in groups
+              li 
+                a(href=`/profile-group?name=${g}`)=g
       else
         h3.profile-tagline
           | Solo Artist
@@ -25,3 +27,4 @@ block content
       if person.instagram != ''
         a.button.button-instagram(href=`${person.instagram}`)
           | Follow on Instagram
+      a.button(href=`/`) < HOME

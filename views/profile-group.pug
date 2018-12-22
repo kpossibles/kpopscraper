@@ -1,0 +1,26 @@
+extends default
+
+block header
+block nav
+block content
+  div.profile
+    div.img-container
+      div.profile-image2(style=`background: url('${group.profilepic}') center
+      no-repeat; background-size: contain;`)
+    div.profile-details
+      h1.profile-name
+        | #{group.name} 
+      h2.profile-realname #{group.kor_name}
+      if group.Group != ''
+        h3.profile-tagline
+          ul
+            each member in group.members
+              li
+                a(href=`/profile?name=${member}&group=${group.name}`)=member
+      p.profile-details
+        | #{group.bio}
+      a.button.button-kpopping(href=`${group.url}`) Kpopping Profile
+      if group.instagram != ''
+        a.button.button-instagram(href=`${group.instagram}`)
+          | Follow on Instagram
+      a.button(href=`/`) < HOME

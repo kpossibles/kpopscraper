@@ -24,6 +24,7 @@
   "homepage": "https://github.com/kpossibles/kpopscraper#readme",
   "dependencies": {
     "express": "^4.16.4",
+    "lazyload": "^2.0.0-beta.2",
     "pug": "^2.0.3"
   }
 }

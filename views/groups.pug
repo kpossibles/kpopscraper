@@ -1,0 +1,13 @@
+extends default
+
+block content
+  div.container
+    each group in groups
+      div.person
+        div.person-image(style=`background: url('${group.profilepic}') center
+        no-repeat; background-size: contain;`)
+        h2.person-name
+          | #{group.name} 
+        h3.person-realname #{group.kor_name}
+        a.button.button-profile(href=`/profile-group?id=${group.id}`)
+          | View Profile

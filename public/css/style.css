@@ -33,6 +33,7 @@ html {
 
 body {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; /* [2] */
+  white-space: pre-wrap;
 }
 
 
@@ -48,10 +49,31 @@ body {
   height: 80px;
   background-color: #525286;
   color: #FFFFFF;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
+/* Navigation
+   ========================================================================== */
 
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#F08ABB;
+  color: #FFFFFF;
+  padding: 10px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+nav a, li{
+  display: inline-block;
+  align-items: center;
+  text-decoration: none;
+  padding:0 10px;
+  color: #525286;
+}
 
 /* Homepage Container
    ========================================================================== */
@@ -69,7 +91,7 @@ body {
 @media all and (max-width: 500px) {
   .container {
     /* On small screens, we are no longer using row direction but column */
-    /* flex-flow: row wrap; */
+    flex-flow: row wrap;
     flex-direction: column;
   }
 }
@@ -94,6 +116,10 @@ body {
   height: 300px;
 }
 
+.person-realname {
+  font-style: italic;
+  color: grey;
+}
 
 
 /* Profile Page
@@ -103,6 +129,7 @@ body {
   display: flex;
   height: 100vh;
   width: 100%;
+  justify-content: space-between;
 }
 
 .img-container {
@@ -111,7 +138,17 @@ body {
   position: relative;
   flex-grow: 1;
   flex-basis: 50%;
+  background: url('/images/bgd_grid.png') repeat;
 }
+
+.profile-name {
+  font-style: bold;
+}
+.profile-realname {
+  font-style: italic;
+  color: grey;
+}
+
 .profile-image {
   height: 100%;
   filter: blur(13px);
@@ -129,7 +166,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
-  border-radius: 50%;
+  filter: drop-shadow(9px 9px 9px rgba(0, 0, 0, 0.3));
 }
 
 .profile-details {
@@ -143,6 +180,10 @@ body {
 
 .profile-details > * {
   margin-bottom: 20px;
+}
+
+.profile-tagline a{
+  text-decoration: none;
 }
 
 
@@ -175,5 +216,33 @@ body {
   color: #FFFFFF;
   background-color: #525286;
   border-radius: 5px;
-  padding: 5px 15px;
+  padding: 5px 50px;
+}
+
+/* back to top */
+.back2Top {
+  width: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  z-index: 999;
+  display: none;
+  cursor: pointer;
+  -moz-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+  background-color: #DDD;
+  color: #555;
+  text-align: center;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.back2Top:hover {
+  background-color: #DDF;
+  color: #000;
 }
