@@ -3,6 +3,7 @@ const people = require('./kpop-profiles.json');
 const groups = require('./kpop-groups.json');
 
 const app = express();
+var port = process.env.PORT || 5000;
 
 app.set('view engine', 'pug');
 
@@ -81,6 +82,6 @@ app.get('/groups', (req, res) => {
     });
 });
 
-const server = app.listen(5000, () => {
+const server = app.listen(port, () => {
     console.log(`Express running → PORT ${server.address().port}`);
 });
