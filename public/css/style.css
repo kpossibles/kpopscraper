@@ -176,6 +176,13 @@ nav a, li{
   display: flex;
   justify-content: center;
   flex-direction: column;
+  
+}
+.profile-bio {
+  text-overflow: ellipsis;
+  padding: 0 40px;
+  height: 250px;
+  overflow: auto;
 }
 
 .profile-details > * {

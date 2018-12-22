@@ -17,7 +17,7 @@ block content
             each member in group.members
               li
                 a(href=`/profile?name=${member}&group=${group.name}`)=member
-      p.profile-details
+      div.profile-bio
         | #{group.bio}
       a.button.button-kpopping(href=`${group.url}`) Kpopping Profile
       if group.instagram != ''
