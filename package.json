@@ -9,7 +9,6 @@
     "test": "test"
   },
   "scripts": {
-    "start": "npx pm2 start server.js --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
