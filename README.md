@@ -16,11 +16,11 @@ I ended up using Node JS and Express to create the simple website with tabs for 
 
  However, since Instagram killed off their API for viewing public data of users, I couldn't complete that part of the project and only figured out a python script to scrape all the recent 12 posts from Instagram via all 1500+ artists. It's viewable on `/python/instagram-user.py` and I don't know how to translate that into javascript.
 
- ![Groups]()
+ ![Groups](https://raw.githubusercontent.com/kpossibles/kpopscraper/master/screenshot-groups.png)
 
- ![Idols]()
+ ![Idols](https://raw.githubusercontent.com/kpossibles/kpopscraper/master/screenshot-idols.png)
 
- ![Profile - HyunA]()
+ ![Profile - HyunA](https://raw.githubusercontent.com/kpossibles/kpopscraper/master/screenshot-profile.png)
 
  I also tried to deploy this project to Heroku but it didn't work. http://kpopscraper.heroku.com doesn't work unfortunately and I coan't figure out why.
 
