@@ -26,4 +26,4 @@ I ended up using Node JS and Express to create the simple website with tabs for 
 
  ### Running the site
 
- Clone the git, install via `npm i` and run it with `npm start` which will start it up on `http://localhost:5000/
+ Clone the git, install via `npm i` and run it with `npm start` which will start it up on http://localhost:5000/
