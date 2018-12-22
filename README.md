@@ -14,15 +14,24 @@ I overestimated how many idols there were as there's 1500+ on the list. The scra
 
 I ended up using Node JS and Express to create the simple website with tabs for GROUPS, IDOLS (individuals), and RANDOM.
 
- However, since Instagram killed off their API for viewing public data of users, I couldn't complete that part of the project and only figured out a python script to scrape all the recent 12 posts from Instagram via all 1500+ artists. It's viewable on `/python/instagram-user.py` and I don't know how to translate that into javascript.
+However, since Instagram killed off their API for viewing public data of users, I couldn't complete that part of the project and only figured out a python script to scrape all the recent 12 posts from Instagram via all 1500+ artists. It's viewable on `/python/instagram-user.py` and I don't know how to translate that into javascript.
 
- ![Groups](https://raw.githubusercontent.com/kpossibles/kpopscraper/master/screenshot-groups.png)
+Something else I learned during this project was deploying to Heroku. After following the steps, you must include `Procfile` and make sure the [port on your server](https://stackoverflow.com/questions/30787451/deploy-node-js-app-on-heroku-succeeds-but-doesnt-work) is 
 
- ![Idols](https://raw.githubusercontent.com/kpossibles/kpopscraper/master/screenshot-idols.png)
+```
+var port = process.env.PORT || 3000;
+app.listen(port);
+```
 
- ![Profile - HyunA](https://raw.githubusercontent.com/kpossibles/kpopscraper/master/screenshot-profile.png)
+### Website
 
- I also tried to deploy this project to Heroku but it didn't work. http://kpopscraper.heroku.com doesn't work unfortunately and I coan't figure out why.
+You can view the live site on https://kpopscraper.herokuapp.com/
+
+![Groups](https://raw.githubusercontent.com/kpossibles/kpopscraper/master/screenshot-groups.png)
+
+![Idols](https://raw.githubusercontent.com/kpossibles/kpopscraper/master/screenshot-idols.png)
+
+![Profile - HyunA](https://raw.githubusercontent.com/kpossibles/kpopscraper/master/screenshot-profile.png)
 
  ### Running the site
 
