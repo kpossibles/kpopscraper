@@ -151,8 +151,7 @@ nav ul li a:hover {
   position: relative;
   flex-grow: 1;
   flex-basis: 50%;
-  height: -moz-fill-available;
-  height: -webkit-fill-available;
+  height: 100vh;
   background: url('/images/bgd_grid.png') repeat;
 }
 
