@@ -1,6 +1,6 @@
 extends default
 
-block header
+
 block nav
   nav.profile-nav
     ul
@@ -11,7 +11,7 @@ block nav
 block content
   div.profile
     div.img-container
-      div.profile-image2(style=`background: url('${group.profilepic}') center
+      div.profile-image2(style=`background: url('/images/${group.profilepic}') center
       no-repeat; background-size: contain;`)
     div.profile-details
       h1.profile-name
