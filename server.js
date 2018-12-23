@@ -62,7 +62,7 @@ app.get('/random', (req, res) => {
         let rand = Math.floor(Math.random() * people.length);
         var person = people.find(p => p.id == rand);
         res.render('profile', {
-            title: `About ${person.stage_name} | ${person.real_name}`,
+            title: `About ${person.stage_name}`,
             person,
         });
     } else {
