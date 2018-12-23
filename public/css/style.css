@@ -62,7 +62,6 @@ nav {
   align-items: center;
   background-color:#F08ABB;
   color: #FFFFFF;
-  padding: 10px;
   margin-bottom: 50px;
   text-transform: uppercase;
 }
@@ -71,8 +70,28 @@ nav a, li{
   display: inline-block;
   align-items: center;
   text-decoration: none;
-  padding:0 10px;
+  padding:10px;
   color: #525286;
+}
+
+nav ul li a {
+  color: #525286;
+  font-size: 18px;
+  padding: 5px 10px;
+  display: inline-block;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.5s ease 0s;
+}
+
+nav ul li a:hover {
+  background-color: #525286;
+  color: #F08ABB;
+  transition: all 0.5s ease 0s;
+}
+
+.profile-nav {
+   margin-bottom: 0;
 }
 
 /* Homepage Container
@@ -86,14 +105,6 @@ nav a, li{
   justify-content: space-around;
   /* grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px; */
-}
-/* Small screens */
-@media all and (max-width: 500px) {
-  .container {
-    /* On small screens, we are no longer using row direction but column */
-    flex-flow: row wrap;
-    flex-direction: column;
-  }
 }
 
 
@@ -127,17 +138,21 @@ nav a, li{
 
 .profile {
   display: flex;
-  height: 100vh;
+  /* height: 100%; */
   width: 100%;
   justify-content: space-between;
 }
-
+.profile li {
+  padding: 0 10px;
+}
 .img-container {
   display: flex;
   flex-direction: column;
   position: relative;
   flex-grow: 1;
   flex-basis: 50%;
+  height: -moz-fill-available;
+  height: -webkit-fill-available;
   background: url('/images/bgd_grid.png') repeat;
 }
 
@@ -181,7 +196,7 @@ nav a, li{
 .profile-bio {
   text-overflow: ellipsis;
   padding: 0 40px;
-  height: 250px;
+  height: auto;
   overflow: auto;
 }
 
@@ -190,6 +205,7 @@ nav a, li{
 }
 
 .profile-tagline a{
+  color: #F08ABB;
   text-decoration: none;
 }
 
@@ -252,4 +268,46 @@ nav a, li{
 .back2Top:hover {
   background-color: #DDF;
   color: #000;
+}
+
+/* Small screens */
+@media only screen and (max-width: 500px) {
+  .container {
+    /* On small screens, we are no longer using row direction but column */
+    /* flex-flow: row wrap; */
+    flex-direction: column;
+  }
+
+  .profile {
+    flex-direction: column;
+  }
+
+  .profile-bio {
+    text-overflow: ellipsis;
+    padding: 0 5px;
+    overflow: auto;
+  }
+
+  .img-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex-grow: 1;
+    flex-basis: 50%;
+    height: 300px;
+    background: url(/images/bgd_grid.png) repeat;
+  }
+
+  .profile-image2 {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    z-index: 100;
+    filter: drop-shadow(9px 9px 9px rgba(0, 0, 0, 0.3));
+  }
 }

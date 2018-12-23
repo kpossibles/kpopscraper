@@ -2,6 +2,12 @@ extends default
 
 block header
 block nav
+  nav.profile-nav
+    ul
+      - var list = ["groups", "idols", "random"]
+      each item in list
+        li
+          a(href=`/${item}`)= item
 block content
   div.profile
     div.img-container
@@ -10,15 +16,17 @@ block content
     div.profile-details
       h1.profile-name
         | #{group.name} 
-      h2.profile-realname #{group.kor_name}
+      if group.kor_name != ''
+        h2.profile-realname #{group.kor_name}
       if group.Group != ''
         h3.profile-tagline
           ul
             each member in group.members
               li
                 a(href=`/profile?name=${member}&group=${group.name}`)=member
-      div.profile-bio
-        | #{group.bio}
+      if group.bio != ''
+        div.profile-bio
+          | #{group.bio}
       a.button.button-kpopping(href=`${group.url}`) Kpopping Profile
       if group.instagram != ''
         a.button.button-instagram(href=`${group.instagram}`)

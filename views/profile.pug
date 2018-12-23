@@ -2,10 +2,16 @@ extends default
 
 block header
 block nav
+  nav.profile-nav
+    ul
+      - var list = ["groups", "idols", "random"]
+      each item in list
+        li
+          a(href=`/${item}`)= item
 block content
   div.profile
     div.img-container
-      div.profile-image2(style=`background: url('/images/${person.profile_pic}') top center
+      div.profile-image2(style=`background: url('/images/${person.profile_pic}') center
       no-repeat; background-size: cover;`)
     div.profile-details
       h1.profile-name
@@ -21,8 +27,9 @@ block content
       else
         h3.profile-tagline
           | Solo Artist
-      p.profile-details
-        | #{person.bio}
+      if person.bio != ''
+        div.profile-bio
+          | #{person.bio}
       a.button.button-kpopping(href=`${person.kpopping}`) Kpopping Profile
       if person.instagram != ''
         a.button.button-instagram(href=`${person.instagram}`)
